@@ -1,28 +1,28 @@
-var api = 'http://127.0.0.1:11898';
+var api = 'http://your.daemon.location:17910';
 var donationAddress = "";
-var blockTargetInterval = 30;
-var coinUnits = 100;
-var symbol = 'trtl';
+
+// 2ACoin block target
+var blockTargetInterval = 90;
+// 2ACoin Coin Units (8 units)
+var coinUnits = 100000000;
+// 2ACoin Coin Symbol
+var symbol = 'ARMS';
+
 var refreshDelay = 30000;
+
 // pools stats by MainCoins
 var networkStat = {
- "trtl": [
-	["z-pool.com", "http://z-pool.com:8117"],
-	["eu.turtlepool.space", "http://eu.turtlepool.space:8117"],
-	["us.turtlepool.space", "http://us.turtlepool.space:8117"],
-	["hk.turtlepool.space", "http://hk.turtlepool.space:8117"],
-	["turtlecoinpool.ddns.net", "http://turtlecoinpool.ddns.net:8127"],
-	["trtl.mine2gether.com", "https://trtl.mine2gether.com/api"],
-	["trtl.heigh-ho.funkypenguin.co.nz", "https://api.trtl.heigh-ho.funkypenguin.co.nz"],
-	["trtl.radicaldelta.org", "http://trtl.radicaldelta.org:8117"],
-	["turtle.atpool.party", "http://turtle-eu.atpool.party:8117"],
-	["ny.minetrtl.us", "http://ny.minetrtl.us:8117"],
-	["xk.is", "https://xk.is/api"]
- ]
+    "arms": [
+        ["pool.2acoin.org", "http://45.76.232.71:19760"],
+        ["arms01.p2poolmining.us", "http://108.61.205.5:19760"],
+        ["arms.codpool.com", "https://pool.codpool.com:8119"],
+        ["2acoin.smartcoinpool.com", "https://2acoin.smartcoinpool.com:7109"],
+        ["2a.cnpools.space", "https://cnpools.dedyn.io:9119"]
+    ]
 };
 
 var networkStat2 = {
-    "trtl": [
+    "arms": [
 	[""]
  ]
 };

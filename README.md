@@ -1,21 +1,26 @@
-# TurtleCoin-Blockchain-Explorer
-Block explorer for TurtleCoin CryptoNote based cryptocurrency.
+# 2ACoin-Blockchain-Explorer
+Block explorer for 2ACoin CryptoNote based cryptocurrency.
 
 #### Installation
 
-1) It takes data from daemon turtlecoind. It should be accessible from the Internet. Run turtlecoind with open port as follows:
+1) It takes data from daemon 2ACoind. It should be accessible from the Internet. Run 2ACcoind with open port as follows:
 ```bash
-./TurtleCoind --enable-cors="*" --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
-```
-2) Just upload to your website and change 'api' variable in config.js to point to your daemon.
+./2ACoind --enable-cors="*" --enable_blockexplorer --rpc-bind-ip=0.0.0.0
+```  
+2) Just upload the contents of this git to your website and change 'api' variable in config.js to point to your daemon.
 
 
-### Development
-Devs:
-    @devopsralf
+### Thanks and Acknowledgements
 
-Donate: [TRTL] TRTLv2RCPuD7AaaVpQkRPF59MMLx5WW3qFxwJz4Doy7dHhNA6UuQjEpLL3rpUQS4RXdQn8fb4P1XC3K62GeJjGgG8DP9LNaTrNL
+Much of this code is derived from;
 
-### Note
 
-A lot of this code is from the great Karbovanets/Karbowanec-Blockchain-Explorer
+-  the TurtleCoin/TurtleCoin-Blockchain-Explorer
+-  the Karbovanets/Karbowanec-Blockchain-Explorer
+
+
+### Licensed ###
+
+Released under the GNU General Public License v2
+
+[http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)

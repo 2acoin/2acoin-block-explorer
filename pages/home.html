@@ -6,7 +6,7 @@
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-md-6 stats">
                         <ul class="nav nav-pills nav-stacked">
                             <li><i class="fa fa-bars"></i> Height: <span id="networkHeight"></span></li>
                             <li><i class="fa fa fa-exchange"></i> Transactions: <span id="networkTransactions"></span></li>
@@ -15,7 +15,7 @@
                             <li><i class="fa fa-percent" aria-hidden="true"></i> Emission: <span id="emissionPercent"></span> %</li>
                         </ul>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-md-6 stats">
                         <ul class="nav nav-pills nav-stacked">
                             <li><i class="fa fa-unlock-alt"></i> Difficulty: <span id="networkDifficulty"></span></li>
                             <li><i class="fa fa-lock"></i> Average Difficulty: <span id="avgDifficulty"></span></li>
@@ -184,7 +184,7 @@
                     success: function(data) {
                     block = data.result.block;
                         updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins,2));
-                        updateText('emissionPercent', (block.alreadyGeneratedCoins / 100000000000000 * 100).toFixed(4));
+                        updateText('emissionPercent', ((block.alreadyGeneratedCoins / 1791000000000000) * 100).toFixed(4));
                         updateText('currentReward', getReadableCoins(block.baseReward,4));
                     }
                 });
