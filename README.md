@@ -21,6 +21,6 @@ Much of this code is derived from;
 
 ### Licensed ###
 
-Released under the GNU General Public License v2
+Released under the GNU General Public License v3
 
-[http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+[http://www.gnu.org/licenses/gpl.html](http://www.gnu.org/licenses/gpl.html)

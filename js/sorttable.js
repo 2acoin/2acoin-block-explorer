@@ -4,7 +4,7 @@
   7th April 2007
   Stuart Langridge, http://www.kryogenix.org/code/browser/sorttable/
 
-  Instructions:
+  Instructions: 
   Download this file
   Add <script src="sorttable.js"></script> to your HTML
   Add class="sortable" to any table you'd like to make sortable
