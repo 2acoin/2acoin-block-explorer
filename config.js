@@ -17,6 +17,7 @@ var networkStat = {
         ["arms01.p2poolmining.us", "http://108.61.205.5:19760"],
         ["arms.codpool.com", "https://pool.codpool.com:8119"],
         ["2acoin.smartcoinpool.com", "https://2acoin.smartcoinpool.com:7109"],
+        ["arms.profitbotpro.com", "https://arms.profitbotpro.com:8119"],
         ["2a.cnpools.space", "https://cnpools.dedyn.io:9119"]
     ]
 };
