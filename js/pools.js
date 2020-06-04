@@ -249,7 +249,7 @@ setInterval(function(){
             updateText('totalPoolsHashrate', getReadableHashRateString(totalHashrate) + '/sec');
             updateText('total_miners', localizeNumber(totalMiners));
             updateText('networkHashrate', getReadableHashRateString(lastStats.difficulty / blockTargetInterval) + '/sec');
-            updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 0).toString());
+            updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 2).toString());
 
             poolStats.push([poolName, parseInt(data.pool.hashrate), colorHash.hex(poolName)]);
         }).always(function() {
@@ -339,7 +339,7 @@ function calcAvgHashRate(){
     avgDiff = Math.round(sum / difficulties.length);
     var avgHashRate = avgDiff / blockTargetInterval;
 
-    updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 0).toString());
+    updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 2).toString());
     updateText('avgHashrate', getReadableHashRateString(avgDiff / blockTargetInterval));
     //updateText('blockSolveTime', getReadableTime(lastStats.difficulty / avgHashRate));
 }
@@ -415,7 +415,7 @@ currentPage = {
     },
     update: function(){
         updateText('networkHashrate', getReadableHashRateString(lastStats.difficulty / blockTargetInterval) + '/sec');
-        updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 0).toString());
+        updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 2).toString());
         getBlocks();
         renderLastBlock();
     }

@@ -135,7 +135,7 @@
             updateText('networkHeight', localizeNumber(lastStats.height.toString()));
             updateText('networkTransactions', localizeNumber(lastStats.tx_count.toString()));
             updateText('networkHashrate', getReadableHashRateString(lastStats.difficulty / blockTargetInterval));
-            updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 0).toString());
+            updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 2).toString());
             $("time.timeago").timeago();
             getPoolTransactions();
             var currHeight = $('#blocks_rows').children().first().data('height');
@@ -418,7 +418,7 @@
         var avgDiff = Math.round(sum / Difficulties.length);
         var avgHashRate = avgDiff / blockTargetInterval;
 
-        //updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 0).toString());
+        //updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 2).toString());
         //updateText('avgHashrate', getReadableHashRateString(avgDiff / blockTargetInterval));
         // updateText('blockSolveTime', getReadableTime(lastStats.difficulty / avgHashRate)); Add back after timestamp is added to mempool
     }
