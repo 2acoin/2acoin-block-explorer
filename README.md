@@ -5,7 +5,7 @@ Block explorer for 2ACoin CryptoNote based cryptocurrency.
 
 1) It takes data from daemon 2ACoind. It should be accessible from the Internet. Run 2ACoind with open port as follows:
 ```
-./2ACoind --enable-cors="*" --enable_blockexplorer --rpc-bind-ip=0.0.0.0
+./2ACoind --enable-cors="*" --enable-blockexplorer --rpc-bind-ip=0.0.0.0
 ```  
 
 2) Just upload the contents of git to your website and change 'api' variable in config.js to point to your daemon.
