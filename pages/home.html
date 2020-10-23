@@ -183,7 +183,7 @@
                     cache: 'false',
                     success: function(data) {
                     block = data.result.block;
-                        updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins,2));
+                        updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins,4));
                         updateText('emissionPercent', ((block.alreadyGeneratedCoins / 1791000000000000) * 100).toFixed(4));
                         updateText('currentReward', getReadableCoins(block.baseReward,4));
                     }
@@ -418,8 +418,8 @@
         var avgDiff = Math.round(sum / Difficulties.length);
         var avgHashRate = avgDiff / blockTargetInterval;
 
-        //updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 2).toString());
-        //updateText('avgHashrate', getReadableHashRateString(avgDiff / blockTargetInterval));
+        updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 2).toString());
+        updateText('avgHashrate', getReadableHashRateString(avgDiff / blockTargetInterval));
         // updateText('blockSolveTime', getReadableTime(lastStats.difficulty / avgHashRate)); Add back after timestamp is added to mempool
     }
 
@@ -457,8 +457,10 @@
                         var timestamp = Date().now; // this is not yet part of the json that gets returned in f_transactions_pool_json, leave for now
                         var columns =
                             /*'<td>' + formatDate(timestamp) + ' (<span class="mtx-ago"></span>)' + '</td>' +*/
-                            '<td>' + getReadableCoins(amount, 4, true) + '</td>' +
-                            '<td>' + getReadableCoins(fee, 4, true) + '</td>' +
+//                            '<td>' + amount + '</td>' +
+                            '<td>' + getReadableCoins(amount,4, true) + '</td>' +
+                            '<td>' + getReadableCoins(fee,4, true) + '</td>' +
+//                            '<td>' + fee + '</td>' +
                             '<td>' + localizeNumber(size) + '</td>' +
                             '<td>' + formatPaymentLink(hash) + '</td>';
                         row.innerHTML = columns;

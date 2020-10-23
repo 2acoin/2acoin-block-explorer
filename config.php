@@ -1,6 +1,6 @@
 <?php
 return array(
-        'api' => 'http://your.daemon.location:17910',
-        'blockTargetInterval' => 90,
+        'api' => 'http://127.0.0.1:17910',
+        'blockTargetInterval' => 30,
         'coinUnits' => 100000000
 );

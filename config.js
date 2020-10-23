@@ -1,29 +1,29 @@
-var api = 'http://your.daemon.location:17910';
+var api = 'https://explorer.2acoin.org/daemon';
 var donationAddress = "";
-
-// 2ACoin block target
 var blockTargetInterval = 90;
-// 2ACoin Coin Units (8 units)
 var coinUnits = 100000000;
-// 2ACoin Coin Symbol
 var symbol = 'ARMS';
-
 var refreshDelay = 30000;
-
 // pools stats by MainCoins
 var networkStat = {
     "arms": [
-        ["pool.2acoin.org", "http://45.76.232.71:19760"],
-        ["arms01.p2poolmining.us", "http://108.61.205.5:19760"],
-        ["arms.codpool.com", "https://pool.codpool.com:8119"],
-        ["2acoin.smartcoinpool.com", "https://2acoin.smartcoinpool.com:7109"],
-        ["arms.profitbotpro.com", "https://arms.profitbotpro.com:8119"],
-        ["2a.cnpools.space", "https://cnpools.dedyn.io:9119"]
+        ["pool.2acoin.org", "https://pool.2acoin.org:19761"],
+        ["arms01.p2poolmining.us", "https://arms01.p2poolmining.us:19761"],
+        ["tkts.cryptonote.club", "https://tkts.cryptonote.club:8197"],
+        ["etrx.cryptonote.club", "https://etrx.cryptonote.club:8197"],
+        ["chukwa.cryptonote.club", "https://chukwa.cryptonote.club:8297"],
+//        ["communitypool.org/2acoin", "https://communitypool.org:8199"],
+        ["fastpool.xyz/arms", "https://fastpool.xyz/api-arms"],
+        ["arms.minercountry.com", "https://arms.minercountry.com/mapi"],
+//        ["minercountry.com", "https://tickets.minercountry.com/mapi"],
+        ["newpool.pw/btcmz", "https://minenice.newpool.pw:8243"],
+        ["multi.walemo.com", "https://multipool.walemo.com:9139"],
+        ["pool.n2aa.org", "https://pool.n2aa.org:8119"]
     ]
 };
 
 var networkStat2 = {
     "arms": [
-	[""]
+	["webarms.semipool.com", "https://webarms.semipool.com/api"]
  ]
 };

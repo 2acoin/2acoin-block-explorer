@@ -12,7 +12,8 @@ var renderDate = function(d) {
         ('0' + (d.getMonth() + 1)).slice(-2) + '-' +
         ('0' + d.getDate()).slice(-2) + ' ' +
         ('0' + d.getHours()).slice(-2) + ':' +
-        ('0' + d.getMinutes()).slice(-2);
+        ('0' + d.getMinutes()).slice(-2) + ':' +
+        ('0' + d.getSeconds()).slice(-2);
 };
 
 
@@ -61,7 +62,7 @@ function updateTextLinkable(elementId, text){
 
 var currentPage;
 var lastStats;
-var numberFormatter = new Intl.NumberFormat('en-US'); // US formatting, force commas.
+var numberFormatter = new Intl.NumberFormat('en-US', {maximumFractionDigits: 4}); // US formatting, force commas.
 
 function localizeNumber(number) {
     return numberFormatter.format(number);
