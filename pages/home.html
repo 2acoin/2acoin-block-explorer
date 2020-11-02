@@ -316,7 +316,7 @@
         if (urlParam('height')) {
             loadHeight = parseInt(urlParam('height'));
         } else {
-            loadHeight = lastStats.last_known_block_index;
+            loadHeight = lastStats.last_known_block_index + 1;
         }
 
         if((loadHeight - 31) < 0) {
