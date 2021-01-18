@@ -1,0 +1,67 @@
+<html>
+  <head>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript">
+    google.charts.load('current', {'packages':['gauge']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function getData (callback) {
+        const nodeList = 'https://blockapi.2acoin.org/node/list';
+        $.getJSON(nodeList, function( Data ) {
+            nodes = Data;
+            callback(nodes);
+        });   
+    }
+
+    function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['Seed-01', 100],
+            ['Seed-02', 100],
+            ['2APool', 100],
+            ['Seed-04', 100],
+            ['Seed-03', 100],
+            ['Seed-05', 100],
+            ['BlockAPI', 100],
+            ['BlockAPI', 100]
+        ]);
+
+        var options = {
+            width: 350, height: 600,
+            redFrom: 0, redTo: 50,
+            yellowFrom:50, yellowTo: 90,
+            minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+        chart.draw(data, options);
+     
+        setInterval(function() {
+            // processing json
+            getData(function(nodeData) {
+                x = 7;
+                for (i in nodeData.nodes) {
+                    console.log(nodeData.nodes[i].name);
+                    console.log(nodeData.nodes[i].availability);
+                    data.setValue( x, 1, nodeData.nodes[i].availability);
+                    chart.draw(data, options);
+                    x=x-1;
+                }
+                var last_date = new Date(nodeData.nodes[0].timestamp*1000); // *1000 because of date takes milliseconds
+                var text = `<br><br>Last Update Time<br>`+last_date.toLocaleString();
+                console.log("time should be next");
+                console.log(text);
+                $(".update_div").html(text);
+            });
+        }, 30000);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 350px; display: block; margin-left: auto; margin-right: auto;"></div>
+    <div class="update_div" style="width: 100%; text-align: center;"></div>
+  </body>
+</html>
+
